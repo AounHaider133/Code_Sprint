@@ -32,5 +32,5 @@ Code Sprint is a language learning game with interactive exercises and tutorials
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/SmartWebCraft.git
+   git clone https://github.com/AounHaider133/Code_Sprint.git
    cd SmartWebCraft
