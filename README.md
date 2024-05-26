@@ -19,7 +19,7 @@ Code Sprint is a language learning game with interactive exercises and tutorials
 - **Responsive Design:** Utilizes Bootstrap 5 and Tailwind CSS for responsive and reusable components.
 - **AI Integration:** Provides design suggestions and optimizes system performance with AI.
 - **Cloud Support:** Backup, fast access, and caching of resources using cloud services.
-- **Backend Management:** Supports PHP for backend development and MongoDB as an object-oriented database.
+- **Backend Management:** Supports Express.js for backend development and MongoDB as an object-oriented database.
 
 ## Installation
 
