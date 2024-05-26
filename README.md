@@ -1,4 +1,5 @@
-#CSC336 - Web Technologies Semester project Spring 2024
+**CSC336 - Web Technologies Semester project Spring 2024**
+
 # Code Sprint
 
 Code Sprint is a language learning game with interactive exercises and tutorials to make a lay person first class citizen in the field of programming paradigm.
