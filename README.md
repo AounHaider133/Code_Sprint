@@ -33,4 +33,4 @@ Code Sprint is a language learning game with interactive exercises and tutorials
 
    ```bash
    git clone https://github.com/AounHaider133/Code_Sprint.git
-   cd SmartWebCraft
+   cd Code_Sprint
