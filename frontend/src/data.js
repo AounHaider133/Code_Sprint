@@ -11,11 +11,11 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 export const links = [
-  { href: "index.html", text: "Home" },
-  { href: "./views/about.html", text: "About" },
-  { href: "./views/sign-up.html", text: "Create Account" },
-  { href: "./views/sign-in.html", text: "Login" },
-  { href: "./views/contact.html", text: "Contact" },
+  { href: "/", text: "Home" },
+  { href: "/about", text: "About" },
+  { href: "/signup", text: "Create Account" },
+  { href: "/signin", text: "Login" },
+  { href: "/contact", text: "Contact" },
   // { href: "./views/typing-master.html", text: "Typing Master" },
 ];
 

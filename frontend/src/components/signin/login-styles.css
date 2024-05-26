@@ -1,0 +1,103 @@
+body {
+  overflow: auto;
+}
+
+.wrappers {
+  width: 450px;
+  /* height: 300px; */
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(50px);
+  border-radius: 10px;
+  color: #fff;
+  padding: 40px 35px 55px;
+  margin: 0 10px;
+}
+.con1 {
+  box-sizing: border-box;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 190px;
+}
+.wrappers h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.wrappers .input-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.input-box .input-fields {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 13px 0;
+}
+
+.input-box .input-fields input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  outline: none;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 6px;
+  padding: 15px 15px 15px 40px;
+}
+
+.input-box .input-fields input::placeholder {
+  color: #fff;
+}
+
+.input-box .input-fields i {
+  position: absolute;
+  left: 15px;
+  top: 35%;
+  transform: translate(-50%);
+  font-size: 20px;
+}
+
+.wrappers label {
+  display: inline-block;
+  font-size: 14.5px;
+  margin: 10px 0 23px;
+}
+
+.wrappers label input {
+  accent-color: #ffffff;
+  margin-right: 5px;
+}
+
+.wrappers .btn {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+@media (max-width: 576px) {
+  .input-box .input-fields {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .con1 {
+    margin-top: 90px;
+    margin-bottom: 10px;
+  }
+}
