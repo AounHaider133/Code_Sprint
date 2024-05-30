@@ -12,7 +12,7 @@ import {
 
 export const links = [
   { href: "/", text: "Home" },
-  { href: "/about", text: "About" },
+  { href: "/about-us", text: "About" },
   { href: "/signup", text: "Create Account" },
   { href: "/signin", text: "Login" },
   { href: "/contact", text: "Contact" },

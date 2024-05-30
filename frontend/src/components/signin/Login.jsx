@@ -1,11 +1,62 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./login-styles.css";
+import Modal from "../modal/Modal"; // Import the Modal component
 import { Link } from "react-router-dom";
 
 const Login = () => {
+  const [formData, setFormData] = useState({
+    username: "",
+    password: "",
+  });
+
+  const [showModal, setShowModal] = useState(false);
+  const [modalMessage, setModalMessage] = useState(""); // State to hold the modal message
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!formData.username || !formData.password) {
+      setModalMessage("Username and password fields cannot be empty.");
+      setShowModal(true);
+      return;
+    }
+
+    try {
+      const response = await fetch("http://localhost:8888/api/users/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        navigate("/dashboard"); // Redirect to dashboard on successful login
+      } else if (response.status === 401) {
+        setModalMessage("Invalid username or password.");
+        setShowModal(true); // Show error modal
+      } else {
+        console.error("Failed to login");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+
   return (
     <div className="con1">
       <div className="wrappers">
-        <form name="signin">
+        <form name="signin" onSubmit={handleSubmit}>
           <h1>Login</h1>
           <div className="input-box">
             <div className="input-fields">
@@ -15,6 +66,8 @@ const Login = () => {
                 required
                 name="username"
                 autoComplete="additional-name"
+                value={formData.username}
+                onChange={handleChange}
               />
               <i className="bx bxs-user"></i>
             </div>
@@ -25,6 +78,8 @@ const Login = () => {
                 placeholder="Password"
                 required
                 name="password"
+                value={formData.password}
+                onChange={handleChange}
               />
               <i className="bx bxs-lock-alt"></i>
             </div>
@@ -35,7 +90,7 @@ const Login = () => {
             Remember me
           </label>
 
-          <button type="button" className="btn btn-login">
+          <button type="submit" className="btn btn-login">
             Login
           </button>
           <div className="signup-link" style={{ marginTop: 20 }}>
@@ -46,6 +101,14 @@ const Login = () => {
           </div>
         </form>
       </div>
+
+      {showModal && (
+        <Modal
+          title="Error"
+          text={modalMessage}
+          onClose={() => setShowModal(false)}
+        />
+      )}
     </div>
   );
 };
