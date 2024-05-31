@@ -108,3 +108,22 @@ export const socialMedia = [
   { href: "#", label: "Twitter", icon: faTwitter },
   { href: "#", label: "Whatsapp", icon: faWhatsapp },
 ];
+
+export const levelData = [
+  {
+    title: "Typing Test",
+    levels: [
+      { name: "Basic", locked: false, progress: 60 },
+      { name: "Intermediate", locked: true, progress: 100 },
+      { name: "Difficult", locked: true, progress: 30 },
+    ],
+  },
+  {
+    title: "Programming Challenge",
+    levels: [
+      { name: "Basic", locked: false, progress: 60 },
+      { name: "Intermediate", locked: true, progress: 80 },
+      { name: "Difficult", locked: true, progress: 40 },
+    ],
+  },
+];

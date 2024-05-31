@@ -19,6 +19,7 @@
   padding: 4rem 2rem;
   border-radius: 0.8rem;
   color: var(--light);
+  color: black;
   background: rgba(255, 255, 255, 1);
   box-shadow: 0.4rem 0.4rem 10.2rem 0.2rem var(--shadow-1);
   position: relative;
