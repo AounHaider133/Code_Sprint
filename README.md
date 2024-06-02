@@ -36,7 +36,7 @@ Code Sprint is a language learning game with interactive exercises and tutorials
    cd Code_Sprint
 2. **Install required packages:**
    ```bash
-   npm intall
+   npm install
 3. **Execute the back-end:**
    ```bash
    cd backend
