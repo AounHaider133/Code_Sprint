@@ -34,3 +34,14 @@ Code Sprint is a language learning game with interactive exercises and tutorials
    ```bash
    git clone https://github.com/AounHaider133/Code_Sprint.git
    cd Code_Sprint
+2. **Install required packages:**
+   ```bash
+   npm intall
+3. **Execute the back-end:**
+   ```bash
+   cd backend
+   npm start
+4. **Execute the front-end:**
+   ```bash
+   cd frontend
+   npm run dev
