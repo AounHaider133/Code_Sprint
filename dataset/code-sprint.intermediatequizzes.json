@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "665c63f9d6a10dd4ce948762"
+  },
+  "questionText": "Fill in the blank: JavaScript is a ____-side scripting language.",
+  "correctAnswer": "client",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665c641ed6a10dd4ce948764"
+  },
+  "questionText": "The ________ method of JavaScript is used to parse a string and return a floating point number.",
+  "correctAnswer": "parseFloat",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665c643ad6a10dd4ce948766"
+  },
+  "questionText": "CSS stands for ________ Style Sheets.",
+  "correctAnswer": "Cascading",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665c645ed6a10dd4ce948768"
+  },
+  "questionText": "In HTML, the <____> tag is used to define a hyperlink.",
+  "correctAnswer": "a",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665c6475d6a10dd4ce94876a"
+  },
+  "questionText": "The ________ property in CSS is used to specify the type of cursor to be displayed.",
+  "correctAnswer": "cursor",
+  "__v": 0
+}]

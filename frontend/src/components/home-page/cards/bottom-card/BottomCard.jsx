@@ -2,7 +2,7 @@ import "../card-styles.css";
 
 const BottomCard = ({ id, title, imgSrc, alt, subTitle, description }) => {
   return (
-    <section id={id} className="wrapper">
+    <section id={id} className="wrapperd">
       <h2 style={{ color: "#ffd700" }}>{title}</h2>
       <div className="feature">
         <img src={imgSrc} alt={alt} />

@@ -1,0 +1,70 @@
+[{
+  "_id": {
+    "$oid": "665c60961b842dd784ac243f"
+  },
+  "questionText": "What is a program in computer science?",
+  "answers": {
+    "a": "a planned series of events, a schedule",
+    "b": "a translated language that is easy for the computer to understand",
+    "c": "a general process for solving a category of problems",
+    "d": "a sequence of instructions that specifies how to perform a computation"
+  },
+  "correctAnswer": "d",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665c61981b842dd784ac2442"
+  },
+  "questionText": "What is the function of the compiler?",
+  "answers": {
+    "a": "It reads a high-level program and translates everything at once, before executing any of the commands.",
+    "b": "It loads the program from its saved location and makes the computer execute it.",
+    "c": "It translates the program line-by-line, alternately reading lines and carrying out commands.",
+    "d": "It translates the program from the low-level language you coded in to a high-level language that the computer can understand."
+  },
+  "correctAnswer": "a",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665c61dc1b842dd784ac2444"
+  },
+  "questionText": "Which of the following is not a component of a computer system?",
+  "answers": {
+    "a": "Input Device",
+    "b": "Stepper Motor",
+    "c": "Memory",
+    "d": "None of the above"
+  },
+  "correctAnswer": "b",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665c62231b842dd784ac2446"
+  },
+  "questionText": "Which of the following is the valid measurement unit of memory?",
+  "answers": {
+    "a": "GB",
+    "b": "MB",
+    "c": "KB",
+    "d": "All"
+  },
+  "correctAnswer": "d",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665c62a2d6a10dd4ce948757"
+  },
+  "questionText": "Which of the following is an application software?",
+  "answers": {
+    "a": "Compiler",
+    "b": "PowerPoint",
+    "c": "Debugger",
+    "d": "None of the Above"
+  },
+  "correctAnswer": "b",
+  "__v": 0
+}]

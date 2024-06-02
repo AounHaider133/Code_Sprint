@@ -1,11 +1,9 @@
-// PlayerCard Component
-import React from "react";
 import "./player-card-style.css";
 
-const PlayerCard = () => {
+const PlayerCard = ({ username, points }) => {
   return (
     <div className="center">
-      <div className="cardt">
+      <div className="cardtt">
         <div className="additional">
           <div className="user-card">
             <div className="level center">Level 13</div>
@@ -185,7 +183,7 @@ const PlayerCard = () => {
             </svg>
           </div>
           <div className="more-info">
-            <h1>aoun_haider</h1>
+            <h1>{username}</h1>
             <div className="coords">
               <span>CodeSprint</span>
               <span>Joined January 2019</span>
@@ -208,7 +206,7 @@ const PlayerCard = () => {
               <div>
                 <div className="title">Hits</div>
                 <i className="fa fa-group"></i>
-                <div className="value">123</div>
+                <div className="value">{points}</div>
               </div>
               <div>
                 <div className="title">Attempts</div>
@@ -219,7 +217,7 @@ const PlayerCard = () => {
           </div>
         </div>
         <div className="general">
-          <h1 style={{ color: "white" }}>aoun_haider</h1>
+          <h1 style={{ color: "white" }}>{username}</h1>
           <p style={{ color: "white" }}>
             Enhancing the coding journey by following interactive questions with
             proper progress tracking. Clean code architectural approach is the

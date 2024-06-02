@@ -12,13 +12,13 @@ import logo from "../../assets/logo-bg-removed.png";
 
 const Footer = ({ description, address, links, socialMedia }) => {
   return (
-    <footer>
-      <div className="row">
-        <div className="col">
+    <footer className="bottom-footer">
+      <div className="roww">
+        <div className="coll">
           <img src={logo} alt="Code Sprint Logo" className="logo" />
           <p>{description}</p>
         </div>
-        <div className="col">
+        <div className="coll">
           <h3 className="footer-link">
             Address
             <div className="underline">
@@ -30,7 +30,7 @@ const Footer = ({ description, address, links, socialMedia }) => {
             <p>{address.line2}</p>
           </address>
         </div>
-        <div className="col">
+        <div className="coll">
           <h3 className="footer-link">
             Links
             <div className="underline">
@@ -43,7 +43,7 @@ const Footer = ({ description, address, links, socialMedia }) => {
             </a>
           ))}
         </div>
-        <div className="col">
+        <div className="coll">
           <h3 className="footer-link">
             Contact Us
             <div className="underline">
@@ -59,10 +59,6 @@ const Footer = ({ description, address, links, socialMedia }) => {
           </div>
         </div>
       </div>
-      <hr />
-      <p className="copyright">
-        Code Sprint &copy; 2024 - All Rights Reserved.
-      </p>
     </footer>
   );
 };

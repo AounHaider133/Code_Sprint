@@ -1,5 +1,5 @@
 /* footer.css */
-footer {
+.bottom-footer {
   width: 100%;
   margin-top: 20px;
   background: linear-gradient(to right, #00093c, #2d0b00);
@@ -13,8 +13,8 @@ footer {
   left: 0;
 }
 
-.row {
-  width: 85%;
+.roww {
+  width: 10000100px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -22,7 +22,7 @@ footer {
   justify-content: space-between;
 }
 
-.col {
+.coll {
   flex-basis: 20%;
   padding: 10px;
 }
@@ -33,24 +33,24 @@ footer {
   margin-bottom: 30px;
 }
 
-.col h3 {
+.coll h3 {
   width: fit-content;
   margin-bottom: 60px;
   position: relative;
   font-size: 30px;
 }
 
-footer a {
+.bottom-footer a {
   text-decoration: none;
   color: #fff;
-  transition: color 0.3s ease; /* Smooth color transition on hover */
+  transition: color 0.3s ease; /* Smooth collor transition on hover */
   display: block; /* Ensure each link appears on a new line */
   margin-bottom: 10px; /* Add some space between links */
 }
 
 /* Hover effect for the links */
-footer a:hover {
-  color: #ffd700; /* Change color on hover (example: gold) */
+.bottom-footer a:hover {
+  color: #ffd700; /* Change collor on hover (example: gold) */
   transform: scale(1.1); /* Scale up the link on hover */
 }
 
@@ -123,7 +123,7 @@ hr {
 }
 
 @media (max-width: 768px) {
-  .col {
+  .coll {
     flex-basis: 100%;
     padding: 10px;
   }
@@ -142,12 +142,12 @@ hr {
 }
 
 @media (max-width: 768px) {
-  .col {
+  .coll {
     flex-basis: 100%;
     padding: 10px;
   }
 
-  .col h3 {
+  .coll h3 {
     font-size: 20px;
   }
 
@@ -157,9 +157,6 @@ hr {
   }
   .underline {
     display: none;
-  }
-  .copyright {
-    text-align: center;
   }
   .social-icons {
     justify-content: center;

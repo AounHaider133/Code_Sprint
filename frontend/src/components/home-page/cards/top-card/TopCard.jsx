@@ -10,7 +10,7 @@ const TopCard = () => {
   };
 
   return (
-    <header id="features" className="wrapper top-card">
+    <header id="features" className="wrapperd top-card">
       <p style={{ fontSize: "30px" }}>
         Master Your Skills with Interactive Learning
       </p>
@@ -18,7 +18,7 @@ const TopCard = () => {
         type="button"
         className="btn btn-login"
         onClick={clickHandler}
-        style={{ width: "150px", float: "left", marginTop: "30px" }}
+        style={{ width: "250px", marginTop: "150px", marginLeft: "-450px" }}
       >
         Start Journey
       </button>

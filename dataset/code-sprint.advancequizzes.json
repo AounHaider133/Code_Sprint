@@ -1,0 +1,107 @@
+[{
+  "_id": {
+    "$oid": "665c653ad6a10dd4ce948776"
+  },
+  "questionText": "int day = 2;\nswitch (\"textbox\") {\n\n\"textbox\" 1:\n    console.log(\"Saturday\");\n    break;\n\n \"textbox\"2:\n    console.log(\"Sunday\");\n    \"textbox\";\n }",
+  "correctAnswers": [
+    "day",
+    "case",
+    "case",
+    "break"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665c655cd6a10dd4ce948778"
+  },
+  "questionText": "Complete the code snippet:\n\nfor (\"textbox\"; i < 10; i++) {\n    // Code goes here\n}",
+  "correctAnswers": [
+    "int i = 0"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665c6675d6a10dd4ce94877a"
+  },
+  "questionText": "Fill in the blanks:\n\nif (\"textbox\" == \"textbox\") {\n    // Code goes here\n} else {\n    // Code goes here\n}",
+  "correctAnswers": [
+    "expression1",
+    "expression2"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665c668cd6a10dd4ce94877c"
+  },
+  "questionText": "Complete the function definition:\n\nvoid functionName(\"textbox\") {\n    // Code goes here\n}",
+  "correctAnswers": [
+    "parameter"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665c6699d6a10dd4ce94877e"
+  },
+  "questionText": "Fill in the blanks:\n\nswitch (\"textbox\") {\n    case \"textbox\":\n        // Code goes here\n        break;\n    default:\n        // Code goes here\n}",
+  "correctAnswers": [
+    "expression",
+    "expression"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665c66add6a10dd4ce948780"
+  },
+  "questionText": "Complete the code snippet:\n\nwhile (\"textbox\") {\n    // Code goes here\n}",
+  "correctAnswers": [
+    "condition"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665c66bed6a10dd4ce948782"
+  },
+  "questionText": "Fill in the blanks:\n\nfor (\"textbox\" : myList) {\n    // Code goes here\n}",
+  "correctAnswers": [
+    "type",
+    "element"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665c66c9d6a10dd4ce948784"
+  },
+  "questionText": "Complete the code snippet:\n\npublic class MyClass {\n    public static void main(\"textbox\") {\n        // Code goes here\n    }\n}",
+  "correctAnswers": [
+    "String[] args"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665c66d8d6a10dd4ce948786"
+  },
+  "questionText": "Fill in the blanks:\n\nString str = \"textbox\";\nString substring = str.substring(\"textbox\", \"textbox\");\n\nWhat is the value of substring?",
+  "correctAnswers": [
+    "beginIndex",
+    "endIndex"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665c66e3d6a10dd4ce948788"
+  },
+  "questionText": "Complete the code snippet:\n\nArrayList<String> list = new ArrayList<>(\"textbox\");\n\nWhat should be replaced in place of \"textbox\" to specify initial capacity?",
+  "correctAnswers": [
+    "capacity"
+  ],
+  "__v": 0
+}]

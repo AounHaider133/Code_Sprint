@@ -20,8 +20,9 @@
   border-radius: 0.8rem;
   color: var(--light);
   color: black;
-  background: rgba(255, 255, 255, 1);
-  box-shadow: 0.4rem 0.4rem 10.2rem 0.2rem var(--shadow-1);
+  background: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   position: relative;
   overflow: hidden;
 }
@@ -37,19 +38,20 @@
 }
 
 .modal__btn {
-  margin-top: 1rem;
-  /* padding: 1rem 0rem; */
-  float: right;
-
-  border: 5px solid black;
-  border-radius: 0.8rem;
-  color: inherit;
-  background: transparent;
-  font-size: 1.2rem;
-  font-family: inherit;
-  letter-spacing: 0.2rem;
-  transition: 0.2s;
+  outline: none;
+  border: none;
+  width: 105px;
+  color: #007acc;
+  padding: 8px 0;
+  font-size: 17px;
+  font-weight: 600;
   cursor: pointer;
+  border-radius: 15px;
+  border: 3px solid #007acc;
+  background: none;
+  transition: transform 0.2s ease;
+  margin-left: 95px;
+  margin-top: 10px;
 }
 
 .modal__btn:hover,

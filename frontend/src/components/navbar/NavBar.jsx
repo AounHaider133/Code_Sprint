@@ -1,4 +1,3 @@
-// NavBar.jsx
 import React from "react";
 import PropTypes from "prop-types";
 import "./navbar.css";
@@ -6,11 +5,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import logo from "../../assets/logo-bg-removed.png";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../AuthContext";
+
 const NavBar = ({ links }) => {
+  const { logout, isUserLogin } = useAuth();
   const [menuActive, setMenuActive] = React.useState(false);
 
   const toggleMenu = () => {
     setMenuActive(!menuActive);
+  };
+
+  const handleLogout = () => {
+    logout();
+    // Additional logic after logout if needed
   };
 
   return (
@@ -24,11 +31,21 @@ const NavBar = ({ links }) => {
       </div>
 
       <nav className={`navbar ${menuActive ? "active" : ""}`}>
-        {links.map((link, index) => (
-          <Link to={link.href} key={index}>
-            {link.text}
-          </Link>
-        ))}
+        {links.map((link, index) => {
+          if (link.text === "Login" && isUserLogin) {
+            return (
+              <Link to="/" key={index} onClick={handleLogout}>
+                Logout
+              </Link>
+            );
+          } else {
+            return (
+              <Link to={link.href} key={index}>
+                {link.text}
+              </Link>
+            );
+          }
+        })}
       </nav>
 
       <div className={`nav-bg ${menuActive ? "active" : ""}`}></div>

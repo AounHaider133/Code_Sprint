@@ -25,6 +25,34 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    points: {
+      type: Number,
+      default: 0,
+    },
+    quiz1_progress: {
+      type: Number,
+      default: 0,
+    },
+    quiz2_progress: {
+      type: Number,
+      default: 0,
+    },
+    quiz3_progress: {
+      type: Number,
+      default: 0,
+    },
+    typing1_progress: {
+      type: Number,
+      default: 0,
+    },
+    typing2_progress: {
+      type: Number,
+      default: 0,
+    },
+    typing3_progress: {
+      type: Number,
+      default: 0,
+    },
   },
   { timestamps: true }
 );

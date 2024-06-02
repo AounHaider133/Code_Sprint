@@ -2,6 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const { connectMongoDB } = require("./connection");
 const userRouter = require("./routes/user");
+const quizRouter = require("./routes/quiz");
+const typingRouter = require("./routes/typing");
 
 const app = express();
 const PORT = 8888;
@@ -18,6 +20,8 @@ app.use(express.urlencoded({ extended: false })); // Parse URL-encoded request b
 
 // Routes
 app.use("/api/users", userRouter); // Updated route to use /api/users
+app.use("/quiz", quizRouter); // Quiz routes
+app.use("/typing", typingRouter); // Typing routes
 
 // Error Handling Middleware
 app.use((err, req, res, next) => {

@@ -1,0 +1,35 @@
+[{
+  "_id": {
+    "$oid": "665c6896d6a10dd4ce948799"
+  },
+  "text": "Software development is a collaborative process that involves writing, testing, and debugging code. Working on a team requires effective communication and problem-solving skills, as well as a willingness to learn from others.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665c68a1d6a10dd4ce94879b"
+  },
+  "text": "Data structures and algorithms are the building blocks of computer science. Understanding how to efficiently store and manipulate data is essential for writing high-performance software applications.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665c68acd6a10dd4ce94879d"
+  },
+  "text": "Cloud computing has revolutionized the way we store and access data. Instead of relying on physical hardware, cloud-based services allow us to access our files and applications from anywhere with an internet connection.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665c68b7d6a10dd4ce94879f"
+  },
+  "text": "Artificial intelligence is a rapidly evolving field that aims to create machines capable of performing tasks that would normally require human intelligence. From self-driving cars to virtual assistants, AI technology is changing the way we interact with computers.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665c68c5d6a10dd4ce9487a1"
+  },
+  "text": "Blockchain technology is transforming industries like finance, healthcare, and supply chain management. By providing a secure and transparent way to record transactions, blockchain has the potential to revolutionize the way we conduct business in the digital age.",
+  "__v": 0
+}]

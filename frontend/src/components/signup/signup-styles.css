@@ -27,20 +27,20 @@ body {
   text-align: center;
   margin-bottom: 20px;
 }
-.wrapper-r .input-box {
+.wrapper-r .input-boxx {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.input-box .input-field {
+.input-boxx .input-fieldd {
   position: relative;
   width: 48%;
   height: 50px;
   margin: 13px 0;
 }
 
-.input-box .input-field input {
+.input-boxx .input-fieldd input {
   width: 100%;
   height: 100%;
   background: transparent;
@@ -52,11 +52,11 @@ body {
   padding: 15px 15px 15px 40px;
 }
 
-.input-box .input-field input::placeholder {
+.input-boxx .input-fieldd input::placeholder {
   color: #fff;
 }
 
-.input-box .input-field i {
+.input-boxx .input-fieldd i {
   position: absolute;
   left: 15px;
   top: 35%;
@@ -90,7 +90,7 @@ body {
 }
 
 @media (max-width: 576px) {
-  .input-box .input-field {
+  .input-boxx .input-fieldd {
     width: 100%;
     margin: 10px 0;
   }

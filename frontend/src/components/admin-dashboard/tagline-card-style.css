@@ -1,0 +1,22 @@
+.about-card {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 100px;
+  height: 110px;
+}
+
+.about-content {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: fit-content;
+}
+
+.tagline-title {
+  margin: 0;
+  font-size: 24px;
+  color: #afdb10;
+}

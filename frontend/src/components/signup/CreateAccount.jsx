@@ -70,8 +70,8 @@ const CreateAccount = () => {
       <div className="wrapper-r">
         <form name="signUp" onSubmit={handleSubmit}>
           <h1>Create Account</h1>
-          <div className="input-box">
-            <div className="input-field">
+          <div className="input-boxx">
+            <div className="input-fieldd">
               <input
                 type="text"
                 placeholder="Full Name"
@@ -83,7 +83,7 @@ const CreateAccount = () => {
               />
               <i className="bx bxs-user"></i>
             </div>
-            <div className="input-field">
+            <div className="input-fieldd">
               <input
                 type="text"
                 placeholder="Username"
@@ -97,8 +97,8 @@ const CreateAccount = () => {
             </div>
           </div>
 
-          <div className="input-box">
-            <div className="input-field">
+          <div className="input-boxx">
+            <div className="input-fieldd">
               <input
                 type="email"
                 placeholder="Email"
@@ -110,7 +110,7 @@ const CreateAccount = () => {
               />
               <i className="bx bxs-envelope"></i>
             </div>
-            <div className="input-field">
+            <div className="input-fieldd">
               <input
                 type="number"
                 placeholder="Phone Number"
@@ -123,8 +123,8 @@ const CreateAccount = () => {
             </div>
           </div>
 
-          <div className="input-box">
-            <div className="input-field">
+          <div className="input-boxx">
+            <div className="input-fieldd">
               <input
                 type="password"
                 placeholder="Password"
@@ -135,7 +135,7 @@ const CreateAccount = () => {
               />
               <i className="bx bxs-lock-alt"></i>
             </div>
-            <div className="input-field">
+            <div className="input-fieldd">
               <input
                 type="password"
                 placeholder="Confirm Password"

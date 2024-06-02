@@ -1,0 +1,35 @@
+[{
+  "_id": {
+    "$oid": "665c68efd6a10dd4ce9487a5"
+  },
+  "text": "Quantum computing is a cutting-edge technology that promises to revolutionize the field of computer science. By harnessing the power of quantum mechanics, quantum computers have the potential to solve complex problems that are currently beyond the capabilities of classical computers.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665c68fad6a10dd4ce9487a7"
+  },
+  "text": "The Internet of Things (IoT) is a network of interconnected devices that communicate with each other and the internet. From smart home appliances to industrial sensors, IoT technology is reshaping the way we interact with the world around us.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665c6905d6a10dd4ce9487a9"
+  },
+  "text": "Big data analytics is a field that focuses on extracting insights from large and complex data sets. By analyzing patterns and trends in data, organizations can make more informed decisions and gain a competitive edge in today's data-driven world.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665c6913d6a10dd4ce9487ab"
+  },
+  "text": "Machine learning is a subset of artificial intelligence that focuses on building systems that can learn from data and improve over time. From recommendation engines to autonomous vehicles, machine learning algorithms are powering a wide range of applications.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665c691ed6a10dd4ce9487ad"
+  },
+  "text": "Augmented reality (AR) and virtual reality (VR) are immersive technologies that blend the digital and physical worlds. From gaming and entertainment to training and education, AR and VR have the potential to transform how we interact with computers and the world around us.",
+  "__v": 0
+}]

@@ -12,7 +12,7 @@
   -webkit-transform: translate(-50%, -50%);
 }
 
-.cardt {
+.cardtt {
   width: 690px;
   height: 350px;
 
@@ -26,11 +26,11 @@
   margin: 1rem;
 }
 
-.cardt h1 {
+.cardtt h1 {
   text-align: center;
 }
 
-.cardt .additional {
+.cardtt .additional {
   position: absolute;
   width: 150px;
   height: 100%;
@@ -42,23 +42,23 @@
   z-index: 2;
 }
 
-.cardt.green .additional {
+.cardtt.green .additional {
   background: linear-gradient(#92bca6, #a2ccb6);
 }
 
-.cardt:hover .additional {
+.cardtt:hover .additional {
   width: 100%;
   border-radius: 0 5px 5px 0;
 }
 
-.cardt .additional .user-card {
+.cardtt .additional .user-card {
   width: 150px;
   height: 100%;
   position: relative;
   float: left;
 }
 
-.cardt .additional .user-card::after {
+.cardtt .additional .user-card::after {
   content: "";
   display: block;
   position: absolute;
@@ -68,8 +68,8 @@
   border-left: 2px solid rgba(0, 0, 0, 0.025);
 }
 
-.cardt .additional .user-card .level,
-.cardt .additional .user-card .points {
+.cardtt .additional .user-card .level,
+.cardtt .additional .user-card .points {
   top: 15%;
   color: #fff;
   text-transform: uppercase;
@@ -81,15 +81,15 @@
   white-space: nowrap;
 }
 
-.cardt .additional .user-card .points {
+.cardtt .additional .user-card .points {
   top: 85%;
 }
 
-.cardt .additional .user-card svg {
+.cardtt .additional .user-card svg {
   top: 50%;
 }
 
-.cardt .additional .more-info {
+.cardtt .additional .more-info {
   width: 500px;
   float: left;
   position: absolute;
@@ -98,30 +98,30 @@
   padding: 20px;
 }
 
-.cardt .additional .more-info h1 {
+.cardtt .additional .more-info h1 {
   color: #fff;
   margin-bottom: 0;
 }
 
-.cardt.green .additional .more-info h1 {
+.cardtt.green .additional .more-info h1 {
   color: #224c36;
 }
 
-.cardt .additional .coords {
+.cardtt .additional .coords {
   margin: 10px 5px;
   color: #fff;
   font-size: 1rem;
 }
 
-.cardt.green .additional .coords {
+.cardtt.green .additional .coords {
   color: #325c46;
 }
 
-.cardt .additional .coords span + span {
+.cardtt .additional .coords span + span {
   float: right;
 }
 
-.cardt .additional .stats {
+.cardtt .additional .stats {
   font-size: 2rem;
   display: flex;
   position: absolute;
@@ -132,36 +132,36 @@
   color: #fff;
 }
 
-.cardt.green .additional .stats {
+.cardtt.green .additional .stats {
   color: #325c46;
 }
 
-.cardt .additional .stats > div {
+.cardtt .additional .stats > div {
   flex: 1;
   text-align: center;
 }
 
-.cardt .additional .stats i {
+.cardtt .additional .stats i {
   display: block;
 }
 
-.cardt .additional .stats div.title {
+.cardtt .additional .stats div.title {
   font-size: 0.75rem;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-.cardt .additional .stats div.value {
+.cardtt .additional .stats div.value {
   font-size: 1.5rem;
   font-weight: bold;
   line-height: 1.5rem;
 }
 
-.cardt .additional .stats div.value.infinity {
+.cardtt .additional .stats div.value.infinity {
   font-size: 2.5rem;
 }
 
-.cardt .general {
+.cardtt .general {
   width: 520px;
   height: 100%;
   position: absolute;
@@ -172,10 +172,10 @@
   padding: 2rem;
   padding-top: 10px;
 }
-.cardt .general .more p {
+.cardtt .general .more p {
   padding-top: 10px;
 }
-.cardt .general .more {
+.cardtt .general .more {
   position: absolute;
   bottom: 1rem;
   right: 1rem;

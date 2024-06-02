@@ -1,17 +1,19 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./login-styles.css";
-import Modal from "../modal/Modal"; // Import the Modal component
+import Modal from "../modal/Modal";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../AuthContext";
 
 const Login = () => {
+  const { login } = useAuth();
   const [formData, setFormData] = useState({
     username: "",
     password: "",
   });
 
   const [showModal, setShowModal] = useState(false);
-  const [modalMessage, setModalMessage] = useState(""); // State to hold the modal message
+  const [modalMessage, setModalMessage] = useState("");
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -41,7 +43,18 @@ const Login = () => {
       });
 
       if (response.ok) {
-        navigate("/dashboard"); // Redirect to dashboard on successful login
+        const userData = await response.json();
+        const userResponse = await fetch(
+          `http://localhost:8888/api/users/${userData.userId}`
+        );
+
+        if (userResponse.ok) {
+          const fullUserData = await userResponse.json();
+          login(fullUserData);
+          navigate("/dashboard");
+        } else {
+          console.error("Failed to fetch user details");
+        }
       } else if (response.status === 401) {
         setModalMessage("Invalid username or password.");
         setShowModal(true); // Show error modal
@@ -97,6 +110,12 @@ const Login = () => {
             Don't have an account?{" "}
             <Link to="/signup" style={{ color: "#008DDA" }}>
               Sign Up
+            </Link>
+          </div>
+          <div className="signup-link" style={{ marginTop: 20 }}>
+            Signin as{" "}
+            <Link to="/admin-signin" style={{ color: "#008DDA" }}>
+              Admin
             </Link>
           </div>
         </form>

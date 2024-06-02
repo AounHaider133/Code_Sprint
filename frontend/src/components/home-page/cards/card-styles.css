@@ -7,8 +7,8 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* Wrapper Styles */
-.wrapper {
+/* wrapperd Styles */
+.wrapperd {
   width: 750px;
   background: rgba(255, 255, 255, 0.1);
   border: 2px rgba(255, 255, 255, 0.2);
@@ -23,12 +23,12 @@
 }
 
 .top-card {
-  height: auto; /* Adjusted to fit content */
+  height: 220px; /* Adjusted to fit content */
   padding-bottom: 80px;
 }
-
-.wrapper:hover {
-  margin-top: 5px;
+.wrapperd > p {
+  width: 100%;
+  display: block;
 }
 
 /* Main Content Styles */
@@ -127,8 +127,8 @@ main {
   background-color: #f0f0f0; /* Darker background on hover */
 }
 
-/* New styles for the login button in the wrapper section */
-.wrapper .btn-login {
+/* New styles for the login button in the wrapperd section */
+.wrapperd .btn-login {
   width: auto; /* Set the width to auto */
   max-width: 200px; /* Maximum width for the button */
   margin: 10px auto 0; /* Center the button and add some top margin */
@@ -160,8 +160,8 @@ main {
 
 /* Media Query for Responsive Design */
 @media (max-width: 576px) {
-  .wrapper {
-    width: 90%; /* Reduce wrapper width on smaller screens */
+  .wrapperd {
+    width: 90%; /* Reduce wrapperd width on smaller screens */
     padding: 20px; /* Adjust padding */
   }
   footer {

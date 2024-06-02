@@ -6,7 +6,7 @@ import { links } from "../data";
 const Signin = () => {
   return (
     <>
-    <Background />
+      <Background />
       <NavBar links={links}></NavBar>
       <Login />
     </>

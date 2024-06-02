@@ -1,0 +1,79 @@
+/* form-styles.css */
+body {
+  overflow: auto;
+}
+
+.wrappers {
+  width: 450px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(50px);
+  border-radius: 10px;
+  color: #fff;
+  padding: 40px 35px 55px;
+  margin: 0 10px;
+}
+
+.con1 {
+  box-sizing: border-box;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 190px;
+}
+
+.wrappers h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.input-box .input-fields {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 13px 0;
+}
+
+.input-box .input-fields textarea {
+  width: 100%;
+  height: 150px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  outline: none;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 6px;
+  padding: 15px;
+  resize: none;
+}
+
+.wrappers .btn {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+@media (max-width: 576px) {
+  .con1 {
+    margin-top: 90px;
+    margin-bottom: 10px;
+  }
+}

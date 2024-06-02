@@ -1,0 +1,35 @@
+[{
+  "_id": {
+    "$oid": "665c6813d6a10dd4ce94878c"
+  },
+  "text": "Computers are everywhere in our modern world. From smartphones to laptops, these devices have become indispensable in our daily lives. Understanding the basics of how computers work is essential for everyone in today's digital age.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665c6825d6a10dd4ce94878e"
+  },
+  "text": "Coding is the language of computers. It allows us to communicate with these machines and instruct them to perform various tasks. Learning simple programming concepts like loops and conditionals can open up a world of opportunities in the field of computer science.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665c6831d6a10dd4ce948790"
+  },
+  "text": "The internet is like a vast digital playground, connecting billions of devices and users worldwide. Knowing how to navigate the web safely and efficiently is a valuable skill in today's interconnected world.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665c683dd6a10dd4ce948792"
+  },
+  "text": "Cybersecurity is a growing concern in our digital society. As technology advances, so do the threats posed by hackers and malicious software. Understanding basic cybersecurity principles can help protect your personal information and devices from cyber attacks..",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665c684ad6a10dd4ce948794"
+  },
+  "text": "In today's fast-paced world, having good typing skills is more important than ever. Whether you're writing emails, chatting with friends, or coding a new software project, being able to type quickly and accurately can save you time and frustration.",
+  "__v": 0
+}]
