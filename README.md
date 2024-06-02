@@ -40,9 +40,10 @@ Code Sprint is a language learning game with interactive exercises and tutorials
 3. **Execute the back-end:**
    ```bash
    cd backend
-4. **Load the necessary dataset in mongoDB from /dataset**
+4. **Execute the back-end**
    npm start
-4. **Execute the front-end:**
+5. **Execute the front-end:**
    ```bash
    cd frontend
    npm run dev
+6. **Export the data in mongoDB from /dataset**
