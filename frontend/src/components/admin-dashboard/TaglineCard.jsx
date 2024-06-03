@@ -1,4 +1,3 @@
-import React from "react";
 import "./tagline-card-style.css";
 
 const TaglineCard = ({ title }) => {

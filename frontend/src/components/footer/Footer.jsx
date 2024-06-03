@@ -1,5 +1,4 @@
 // Footer.jsx
-import React from "react";
 import PropTypes from "prop-types";
 import "./footer.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

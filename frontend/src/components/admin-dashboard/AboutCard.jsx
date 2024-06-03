@@ -1,4 +1,3 @@
-import React from "react";
 import "./about-card-style.css";
 
 const AboutCard = ({ title, buttonText, clickHandler }) => {

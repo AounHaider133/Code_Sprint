@@ -1,5 +1,4 @@
 // AnimatedText.jsx
-import React from "react";
 import "./animated-text-style.css";
 
 const AnimatedText = ({ text }) => {
