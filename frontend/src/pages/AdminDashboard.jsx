@@ -1,5 +1,4 @@
-// AdminDashboard.jsx
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   fetchBasicQuiz,
   fetchIntermediateQuiz,
@@ -7,6 +6,7 @@ import {
   fetchBasicTyping,
   fetchIntermediateTyping,
   fetchAdvanceTyping,
+  fetchAllUsers,
 } from "../api";
 import { links, address, description, socialMedia } from "../data";
 import Background from "../components/background/Background";
@@ -16,6 +16,7 @@ import QuestionTable from "../components/admin-dashboard/QuestionTable";
 import AboutCard from "../components/admin-dashboard/AboutCard";
 import TaglineCard from "../components/admin-dashboard/TaglineCard";
 import { useNavigate } from "react-router-dom";
+import UserTable from "../components/admin-dashboard/UserTable";
 
 const AdminDashboard = () => {
   const [basicQuestions, setBasicQuestions] = useState([]);
@@ -24,6 +25,7 @@ const AdminDashboard = () => {
   const [basicTyping, setBasicTyping] = useState([]);
   const [intermediateTyping, setIntermediateTyping] = useState([]);
   const [advanceTyping, setAdvanceTyping] = useState([]);
+  const [users, setUsers] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -62,6 +64,10 @@ const AdminDashboard = () => {
       .catch((error) =>
         console.error("Error while fetching advance typing data:", error)
       );
+
+    fetchAllUsers()
+      .then((response) => setUsers(response.data))
+      .catch((error) => console.log("Error while fetching user data:", error));
   }, []);
 
   const handleAddParagraph = (level) => {
@@ -76,11 +82,23 @@ const AdminDashboard = () => {
     navigate("/admin-dashboard/add-quiz/basic");
   };
 
+  const handleAddUser = () => {
+    navigate("/admin-dashboard/users/add-user");
+  };
+
   return (
     <>
       <Background />
       <NavBar links={links} />
       {/* Typing Test */}
+      <TaglineCard title="Accounts" />
+      <AboutCard
+        title="Users"
+        buttonText="Add User"
+        clickHandler={handleAddUser}
+      />
+      <UserTable users={users} />
+
       <TaglineCard title="Typing Test" />
       <AboutCard
         title="Basic Level"

@@ -1,6 +1,6 @@
 import "./player-card-style.css";
 
-const PlayerCard = ({ username, points }) => {
+const PlayerCard = ({ username, points, createdAt }) => {
   return (
     <div className="center">
       <div className="cardtt">
@@ -186,7 +186,7 @@ const PlayerCard = ({ username, points }) => {
             <h1>{username}</h1>
             <div className="coords">
               <span>CodeSprint</span>
-              <span>Joined January 2019</span>
+              <span>Joined {createdAt}</span>
             </div>
             <div className="coords">
               <span>Junior Developer</span>

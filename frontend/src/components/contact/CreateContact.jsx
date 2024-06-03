@@ -1,10 +1,68 @@
-import "./create-contact-styles.css";
+//npm i emailjs-com
+//Service ID: service_y0nyw6c
+//Template ID: template_wk26xwh
+//User ID/public key: tH29OXxd2x2PsJMxT
 
+import { useState } from "react";
+import emailjs from "emailjs-com";
+import Modal from "../modal/Modal";
+import "./create-contact-styles.css";
+import { useNavigate } from "react-router-dom";
 const CreateContact = () => {
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [showModal, setShowModal] = useState(false);
+  const [modalText, setModalText] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Validate form fields
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.subject ||
+      !formData.message
+    ) {
+      setModalText("Please fill in all fields.");
+      setShowModal(true);
+      return;
+    }
+
+    // EmailJS service parameters
+    const serviceID = "service_y0nyw6c"; // Replace with your actual Service ID
+    const templateID = "template_wk26xwh"; // Replace with your actual Template ID
+    const userID = "tH29OXxd2x2PsJMxT"; // Replace with your actual User ID (Public Key)
+
+    emailjs.send(serviceID, templateID, formData, userID).then(
+      (response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        setModalText("Message sent successfully!");
+        setShowModal(true);
+        setFormData({ name: "", email: "", subject: "", message: "" }); // Clear form fields
+        navigate("/");
+      },
+      (error) => {
+        console.log("FAILED...", error);
+        setModalText("Failed to send message. Please try again later.");
+        setShowModal(true);
+      }
+    );
+  };
+
   return (
     <div className="cons">
       <div className="wrapper-c">
-        <form action="" name="contactForm">
+        <form onSubmit={handleSubmit} name="contactForm">
           <h1>Send Message</h1>
           <div className="input-box1">
             <div className="input-field1">
@@ -15,9 +73,10 @@ const CreateContact = () => {
                   type="text"
                   id="name"
                   placeholder="Full Name"
-                  required
                   name="name"
                   autoComplete="name"
+                  value={formData.name}
+                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -30,9 +89,10 @@ const CreateContact = () => {
                   type="email"
                   id="email"
                   placeholder="Email"
-                  required
                   name="email"
                   autoComplete="email"
+                  value={formData.email}
+                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -45,8 +105,9 @@ const CreateContact = () => {
                   type="text"
                   id="subject"
                   placeholder="Subject"
-                  required
                   name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -56,13 +117,14 @@ const CreateContact = () => {
               <textarea
                 id="message"
                 placeholder="Message"
-                required
                 name="message"
                 className="message-box"
+                value={formData.message}
+                onChange={handleChange}
               ></textarea>
             </div>
 
-            <button type="button" className="btn">
+            <button type="submit" className="btn">
               Send Message
             </button>
           </div>
@@ -73,19 +135,19 @@ const CreateContact = () => {
             <div className="contact-item">
               <i className="bx bxs-envelope"></i>
               <p>
-                <strong>Email:</strong> info@yourcompany.com
+                <strong>Email:</strong> AounHaiderSandhu@gmail.com
               </p>
             </div>
             <div className="contact-item">
               <i className="bx bxs-phone"></i>
               <p>
-                <strong>Phone:</strong> +1-123-456-7890
+                <strong>Phone:</strong> +923280416491
               </p>
             </div>
             <div className="contact-item">
               <i className="bx bxs-map"></i>
               <p>
-                <strong>Address:</strong> 123 Main Street, City, Country
+                <strong>Address:</strong> Dream Gardens, Lahore, Pakistan
               </p>
             </div>
             <div className="contact-item">
@@ -97,6 +159,13 @@ const CreateContact = () => {
           </div>
         </div>
       </div>
+      {showModal && (
+        <Modal
+          title="Notification"
+          text={modalText}
+          onClose={() => setShowModal(false)}
+        />
+      )}
     </div>
   );
 };

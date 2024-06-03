@@ -19,11 +19,14 @@ import EditAdvanceQuizForm from "./pages/EditAdvanceQuizForm";
 import CreateIntermediateQuizForm from "./pages/CreateIntermediateQuizForm";
 import CreateAdvanceQuizForm from "./pages/CreateAdvanceQuizForm";
 import AdminSignin from "./pages/AdminSignin";
+import EditAccountForm from "./pages/EditAccountForm";
+import AddUserForm from "./pages/AddUserForm";
 
 function App() {
-  const { isUserLogin } = useAuth();
+  const { isUserLogin, isAdminLogin } = useAuth();
 
   console.log("IsUserLogin:" + isUserLogin);
+  console.log("IsAdminLogin:" + isAdminLogin);
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -42,41 +45,54 @@ function App() {
       <Route path="/quiz/:id" element={isUserLogin ? <Quiz /> : <Signin />} />
       <Route
         path="/admin-dashboard"
-        element={isUserLogin ? <AdminDashboard /> : <Signin />}
+        element={isAdminLogin ? <AdminDashboard /> : <AdminSignin />}
       />
       <Route
         path="/admin-dashboard/typing/edit/:id/:level"
-        element={isUserLogin ? <EditParagraph /> : <Signin />}
+        element={isAdminLogin ? <EditParagraph /> : <AdminSignin />}
       />
       <Route
         path="/admin-dashboard/quiz/edit/:id/basic"
-        element={isUserLogin ? <EditBasicQuizForm /> : <Signin />}
+        element={isAdminLogin ? <EditBasicQuizForm /> : <AdminSignin />}
       />
       <Route
         path="/admin-dashboard/quiz/edit/:id/intermediate"
-        element={isUserLogin ? <EditIntermediateQuizForm /> : <Signin />}
+        element={isAdminLogin ? <EditIntermediateQuizForm /> : <AdminSignin />}
       />
       <Route
         path="/admin-dashboard/quiz/edit/:id/advance"
-        element={isUserLogin ? <EditAdvanceQuizForm /> : <Signin />}
+        element={isAdminLogin ? <EditAdvanceQuizForm /> : <AdminSignin />}
       />
       <Route
         path="/admin-dashboard/add-quiz/basic"
-        element={isUserLogin ? <CreateBasicQuestionForm /> : <Signin />}
+        element={isAdminLogin ? <CreateBasicQuestionForm /> : <AdminSignin />}
       />
       <Route
         path="/admin-dashboard/add-quiz/intermediate"
-        element={isUserLogin ? <CreateIntermediateQuizForm /> : <Signin />}
+        element={
+          isAdminLogin ? <CreateIntermediateQuizForm /> : <AdminSignin />
+        }
       />
       <Route
         path="/admin-dashboard/add-quiz/advance"
-        element={isUserLogin ? <CreateAdvanceQuizForm /> : <Signin />}
+        element={isAdminLogin ? <CreateAdvanceQuizForm /> : <AdminSignin />}
       />
       <Route
         path="/admin-dashboard/add-para/:level"
-        element={isUserLogin ? <CreatePara /> : <Signin />}
+        element={isAdminLogin ? <CreatePara /> : <AdminSignin />}
       />
-      <Route path="/admin-signin" element={<AdminSignin />} />
+      <Route
+        path="/admin-signin"
+        element={isAdminLogin ? <AdminSignin /> : <AdminSignin />}
+      />
+      <Route
+        path="/admin-dashboard/users/edit/:id"
+        element={<EditAccountForm />}
+      />
+      <Route
+        path="/admin-dashboard/users/add-user"
+        element={isAdminLogin ? <AddUserForm /> : <AdminSignin />}
+      />
     </Routes>
   );
 }

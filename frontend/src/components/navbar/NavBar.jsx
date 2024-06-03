@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../../AuthContext";
 
 const NavBar = ({ links }) => {
-  const { logout, isUserLogin } = useAuth();
+  const { logout, isUserLogin, isAdminLogin, adminLogout } = useAuth();
   const [menuActive, setMenuActive] = React.useState(false);
 
   const toggleMenu = () => {
@@ -17,7 +17,10 @@ const NavBar = ({ links }) => {
 
   const handleLogout = () => {
     logout();
-    // Additional logic after logout if needed
+  };
+
+  const handleAdminLogout = () => {
+    adminLogout();
   };
 
   return (
@@ -32,10 +35,36 @@ const NavBar = ({ links }) => {
 
       <nav className={`navbar ${menuActive ? "active" : ""}`}>
         {links.map((link, index) => {
-          if (link.text === "Login" && isUserLogin) {
+          if (link.text === "Login" && isUserLogin && !isAdminLogin) {
             return (
               <Link to="/" key={index} onClick={handleLogout}>
                 Logout
+              </Link>
+            );
+          } else if (link.text === "Login" && !isUserLogin && isAdminLogin) {
+            return (
+              <Link to="/" key={index} onClick={handleAdminLogout}>
+                Logout
+              </Link>
+            );
+          } else if (
+            link.text === "Create Account" &&
+            isUserLogin &&
+            !isAdminLogin
+          ) {
+            return (
+              <Link to="/dashboard" key={index}>
+                Dashboard
+              </Link>
+            );
+          } else if (
+            link.text === "Create Account" &&
+            !isUserLogin &&
+            isAdminLogin
+          ) {
+            return (
+              <Link to="/admin-dashboard" key={index}>
+                Dashboard
               </Link>
             );
           } else {

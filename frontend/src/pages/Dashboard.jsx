@@ -6,10 +6,33 @@ import LevelsCard from "../components/cards/LevelsCard";
 import Footer from "../components/footer/Footer";
 import { description, address, socialMedia } from "../data";
 import { useAuth } from "../AuthContext";
-import { useEffect } from "react";
 
 const Dashboard = () => {
   const { user } = useAuth();
+
+  function formatDate(dateString) {
+    const date = new Date(dateString);
+
+    const monthNames = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+
+    const month = monthNames[date.getMonth()];
+    const year = date.getFullYear();
+
+    return `${month} ${year}`;
+  }
 
   const levelData = [
     {
@@ -63,7 +86,11 @@ const Dashboard = () => {
     <>
       <Background />
       <NavBar links={links} />
-      <PlayerCard username={user.username} points={user.points} />
+      <PlayerCard
+        username={user.username}
+        points={user.points}
+        createdAt={formatDate(user.createdAt)}
+      />
       <LevelsCard data={levelData} />
       <Footer
         description={description}

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../../AuthContext";
 
 const Login = () => {
-  const { login } = useAuth();
+  const { adminLogin, logout } = useAuth();
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -54,7 +54,8 @@ const Login = () => {
           if (userResponse.ok) {
             const fullUserData = await userResponse.json();
 
-            login(fullUserData);
+            adminLogin();
+            logout(); //logout the user if already logged in
             navigate("/admin-dashboard");
           } else {
             console.error("Failed to fetch user details");
