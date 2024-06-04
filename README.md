@@ -47,3 +47,13 @@ Code Sprint is a language learning game with interactive exercises and tutorials
    cd frontend
    npm run dev
 6. **Export the data in mongoDB from /dataset**
+7. **Create account on EmailJS, follow the tutorial in below link regarding account creation, add template shared below-> save, copy service ID, template ID & user ID(public key)**
+   ```bash
+   https://dev.to/david_bilsonn/how-to-send-emails-directly-from-your-react-website-a-step-by-step-tutorial-144b#:~:text=Step%201%3A%20Sign%20up%20for%20an%20account%20on,navigation%20menu%2C%20then%20click%20on%20%27Add%20new%20service%27.
+8. **EmailJS template**
+   ```bash
+   <h2>[CodeSprint] New Contact Message</h2>
+<p><strong>Name:</strong> {{name}}</p>
+<p><strong>Email:</strong> {{email}}</p>
+<p><strong>Subject:</strong> {{subject}}</p>
+<p><strong>Message:</strong> {{message}}</p>
