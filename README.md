@@ -53,7 +53,7 @@ Code Sprint is a language learning game with interactive exercises and tutorials
 8. **EmailJS template**
    ```bash
    <h2>[CodeSprint] New Contact Message</h2>
-<p><strong>Name:</strong> {{name}}</p>
-<p><strong>Email:</strong> {{email}}</p>
-<p><strong>Subject:</strong> {{subject}}</p>
-<p><strong>Message:</strong> {{message}}</p>
+   <p><strong>Name:</strong> {{name}}</p>
+   <p><strong>Email:</strong> {{email}}</p>
+   <p><strong>Subject:</strong> {{subject}}</p>
+   <p><strong>Message:</strong> {{message}}</p>
